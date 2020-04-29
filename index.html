@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Netflix - Watch TV Shows Online, Watch Movies Online
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        #header {
+            background: black;
+            color: white;
+            overflow: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        
+        #header a {
+            font-family: Helvetica;
+            text-decoration: none;
+        }
+        
+        #header a:hover {
+            color: red;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            background: red;
+            margin-right: 25px;
+            padding: 20px;
+        }
+        
+        .leftMenu {
+            float: left;
+            display: inline-block;
+        }
+        
+        .leftMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .leftMenu ul li {
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .leftMenu ul li a {
+            color: white;
+        }
+        
+        .leftMenu ul li a.dropdown {
+            color: red;
+        }
+        
+        .rightMenu {
+            float: right;
+            display: inline-block;
+        }
+        
+        .rightMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .rightMenu ul li {
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .rightMenu ul li a {
+            color: white;
+        }
+        
+        .rightMenu {
+            float: right;
+            display: inline-block;
+        }
+        
+        #largeimage {
+            padding: 200px 25px;
+            background: -webkit-linear-gradient(45deg, rgba(231, 31, 17, .7)0%, #000000 100%), url(https://bungalower.com/wp-content/uploads/2020/03/TigerKingReviewThumbnail.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .description-box {
+            width: 50%;
+        }
+        
+        .description-box h1 {
+            font-size: 60px;
+            font-family: helvetica;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .description-box h3 {
+            font-family: helvetica;
+            font-weight: 400;
+            font-size: 25px;
+            margin: 0px;
+            color: white;
+        }
+        
+        .description-box h4 {
+            font-family: helvetica;
+            font-weight: 300;
+            color: white;
+        }
+        
+        .description-box p {
+            margin: 25px 0px 0px 0px;
+            font-family: helvetica;
+            font-weight: 300;
+            font-size: 18px;
+            color: white;
+        }
+        
+        #videoSection {
+            width: 100%;
+            background: black;
+        }
+        
+        .row {
+            font-size: 0;
+            width: 100;
+        }
+        
+        .zoom {
+            transition: transform .2s;
+        }
+        
+        .videoBoxes {
+            display: inline-block;
+            background: red;
+            width: 15%;
+            height: 300px;
+            font-size: 16px;
+            margin: 2.5%;
+            padding: 15px;
+            transition: transform .2s;
+        }
+        
+        .videoBoxes.zoom:hover {
+            transform: scale(1.5);
+        }
+        
+        .videoBoxes h4 {
+            margin: 0;
+            color: white;
+        }
+        
+        .video1 {
+            background: url(https://www.reeldeals.com/pictures/usfinalposter.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video2 {
+            background: url(https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_920/fl_lossy,pg_1/gdv2pu6io6ekpg5r8mta/back-to-the-future);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video3 {
+            background: url(https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/product_image_aspect_switcher_170w/public/product-images/csm-movie/k8hsrpnoqe8ofd10bljdyf0m1wi.jpg?itok=xrRcmkcJ);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video4 {
+            background: url(https://upload.wikimedia.org/wikipedia/en/d/db/Belly_poster.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video5 {
+            background: url(https://upload.wikimedia.org/wikipedia/en/1/13/DB_THE_MOVIE_NO._20.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .videoBoxes {
+                width: 95%;
+                margin: 2.5%;
+            }
+            .videoBoxes h4 {
+                font-family: helvetica;
+                font-weight: 100;
+                font-size: 40px;
+            }
+            .videoBoxes p {
+                font-family: Helvetica;
+                font-weight: 300;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="logo">Netflix</div>
+        <div class="leftMenu">
+            <ul>
+                <li>
+                    <a href="Browse.html" class="dropdown">Browse</a>
+                </li>
+                <li>
+                    <a href="Kids.html">Kids</a>
+                </li>
+                <li>
+                    <a href="DVD.html">DVD</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rightMenu">
+            <ul>
+                <li>
+                    <a href="Browse.html">Search</a>
+                </li>
+                <li>
+                    <a href="Kids.html">Bell</a>
+                </li>
+                <li>
+                    <a href="DVD.html">Username</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="largeimage">
+
+        <div class="description-box">
+            <h4>Netflix Presents</h4>
+            <h1>Tiger King Season 2</h1>
+            <h3>Coming May 20</h3>
+            <p> The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum."</p>
+
+        </div>
+    </div>
+    </div>
+
+    <div id="videoSection">
+        <div class="row">
+            <div class="videoBoxes video1">
+                <h4>US</h4>
+            </div>
+            <div class="videoBoxes video2">
+                <h4>Back To The Future</h4>
+
+            </div>
+            <div class="videoBoxes video3">
+                <h4>Paid In Full </h4>
+            </div>
+            <div class="videoBoxes video4">
+                <h4>Belly</h4>
+            </div>
+            <div class="videoBoxes video5">
+                <h4>Dragonball Super</h4>
+            </div>
+        </div>
+    </div>
+</body>
